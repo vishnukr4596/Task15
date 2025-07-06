@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Array Operations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #eef;
+    }
+    h1 {
+      color: #222;
+    }
+    .output {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Array Operations</h1>
+
+  <div class="output" id="sortOutput"></div>
+  <div class="output" id="concatOutput"></div>
+  <div class="output" id="removeOutput"></div>
+
+  <script>
+    // 1. Sort a JavaScript Array
+    let unsortedArray = [25, 10, 35, 5, 40];
+    let sortedArray = [...unsortedArray].sort(function(a, b) { return a - b; });
+
+    document.getElementById("sortOutput").innerHTML =
+      "<h2>1. Sort JavaScript Array:</h2>" +
+      "Original Array: [" + unsortedArray + "]<br>" +
+      "Sorted Array: [" + sortedArray + "]";
+
+    // 2. Concatenate Two Arrays
+    let array1 = ['a', 'b', 'c'];
+    let array2 = [1, 2, 3];
+    let combinedArray = array1.concat(array2);
+
+    document.getElementById("concatOutput").innerHTML =
+      "<h2>2. Concatenate Two Arrays:</h2>" +
+      "Array 1: [" + array1 + "]<br>" +
+      "Array 2: [" + array2 + "]<br>" +
+      "Combined Array: [" + combinedArray + "]";
+
+    // 3. Remove First Element of an Array
+    let fruits = ["Apple", "Banana", "Orange"];
+    let removedElement = fruits.shift(); // removes first
+    document.getElementById("removeOutput").innerHTML =
+      "<h2>3. Remove First Element from Array:</h2>" +
+      "Removed Element: " + removedElement + "<br>" +
+      "Updated Array: [" + fruits + "]";
+  </script>
+
+</body>
+</html>
